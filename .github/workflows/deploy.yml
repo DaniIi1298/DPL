@@ -21,6 +21,8 @@ jobs:
               composer install --no-dev --optimize-autoloader
               npm install
               npm run build
+              php artisan view:clear
+              php artisan route:clear
               php artisan view:cache
               php artisan route:cache
               sudo service php8.4-fpm reload
